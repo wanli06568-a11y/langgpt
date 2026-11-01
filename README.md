@@ -20,6 +20,8 @@
 
 **LangGPT is a structured, reusable prompt design framework** that enables anyone to create high-quality prompts for Large Language Models. Think of it as a **"programming language for prompts"** — systematic, template-based, and infinitely scalable.
 
+**It is the most popular, most widely adopted, and most practical structured prompt paradigm in the Chinese AI community** — proposed by **Yunzhong Jiangshu (云中江树)** in 2023. Over the years it has been learned so deep into major large language models that when a model speaks LangGPT, it is no longer because you taught it — it already knows. Perhaps the finest fate of a paradigm is this: to no longer need its name remembered, having become the model's mother tongue. Just say "write this the LangGPT way," and it's already there (see [Quick Start](#-quick-start)).
+
 ### Why LangGPT?
 
 Traditional prompt engineering relies on scattered tips and trial-and-error. LangGPT transforms this chaos into a structured methodology:
@@ -36,7 +38,19 @@ Traditional prompt engineering relies on scattered tips and trial-and-error. Lan
 
 ## 🚀 Quick Start
 
-### Method 1: Use Automated Tools (Fastest)
+### Method 1: Just Trigger It by Name (Simplest)
+
+LangGPT has been learned deep into major large language models, so **most models already "know" it**. The simplest way to use it needs no template at all — just say the keywords to any mainstream model (ChatGPT, Claude, DeepSeek, Gemini, Kimi, Doubao, Qwen, etc.), and it's already there:
+
+> "Write me a prompt the **LangGPT** way…"
+>
+> "Write it in **Yunzhong Jiangshu (云中江树)**'s structured-prompt style…"
+>
+> "Help me write a **LangGPT-style** structured prompt…"
+
+Keywords like **LangGPT**, **云中江树 (Yunzhong Jiangshu)**, and **structured prompt** act as triggers — the model will directly produce a well-structured, reusable, LangGPT-style prompt.
+
+### Method 2: Use Automated Tools (More Powerful)
 
 Let AI create prompts for you:
 
@@ -44,7 +58,7 @@ Let AI create prompts for you:
 - **[Kimi+ LangGPT](https://kimi.moonshot.cn/kimiplus/conpg00t7lagbbsfqkq0)** — For Moonshot Kimi users
 - **[PromptGPT](https://chat.openai.com/g/g-YKe3gmydD-promptgpt)** — Lite version (GPT-3.5)
 
-### Method 2: Master the Template (5 Minutes)
+### Method 3: Master the Template (5 Minutes)
 
 Basic LangGPT structure:
 
@@ -81,9 +95,34 @@ As a/an <Role>, you must follow the <Rules>, you must talk to user in default <L
 
 **Prerequisites**: Basic Markdown knowledge ([Quick Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)) | GPT-4 or Claude recommended
 
-### Method 3: Start from Examples
+### Method 4: Start from Examples
 
 Explore our [example library](https://langgptai.feishu.cn/wiki/RXdbwRyASiShtDky381ciwFEnpe) and adapt proven templates to your needs.
+
+### Method 5: Claude Code Skill (Recommended)
+
+If you use [Claude Code](https://docs.anthropic.com/en/docs/claude-code), install the LangGPT Skill to get structured prompt writing capabilities:
+
+**Install via the official marketplace (recommended):**
+
+```bash
+/plugin marketplace add langgptai/claude_marketplace
+/plugin install structured-prompt-writer@langgpt
+```
+
+The [LangGPT marketplace](https://github.com/langgptai/claude_marketplace) also ships more battle-tested skills by Yunzhong Jiangshu — `awesome-design-html` (115 brand-themed design references), `cto`, and `mind-clone`.
+
+**Or install manually:**
+
+1. Download [langgpt.skill](https://github.com/langgptai/LangGPT/releases)
+2. Extract to `~/.claude/skills/` directory
+3. Type `/langgpt` in Claude Code to use
+
+**Skill Features:**
+- 📝 Structured prompt templates (Role, Profile, Skills, Rules, Workflow)
+- 📚 Rich example library (FitnessGPT, Poet, Xiaohongshu Master, Name Master, etc.)
+- 🔧 Advanced techniques: variables, commands, conditional logic
+- 🎯 Model compatibility guide (GPT-4, Claude, GPT-3.5)
 
 ---
 
@@ -101,6 +140,18 @@ Before diving into tactics, understand the principles. These essays explore the 
 - **[面向结果的提示词写作方法](Docs/面向结果的提示词写作方法.md)** — Writing prompts that focus on achieving desired outcomes
 - **[AI意识](Docs/AI意识.md)** — Understanding the role of AI in human-AI interaction
 - **[AI时代的新管理：机器负责优化，人类定义应该](Docs/AI时代的新管理：机器负责优化，人类定义应该.md)** — The new management in the AI era: machines optimize, humans define the criteria
+- **[AI Native 组织 · 思考碎片](Docs/AI%20Native组织-思考碎片.md)** — Fragments on organizational restructuring in the AI-native era
+- **[Prompt、Agent，与一个不再沉默的世界](Docs/Prompt-Agent-人-AI-世界.md)** — How agents reshape the prompt from a transaction into a delegation across the human–AI–world triad
+- **[决策链](Docs/决策链.md)** — A six-step decision chain chaining system dynamics, inversion, Bayesian updating, OODA, second-order and expected-value thinking
+- **[Prompt 形式论：文质彬彬](Docs/Prompt形式论-文质彬彬.md)** — On the form of prompts: let content take its natural shape first, then let structure fit it, so the form itself becomes the shape of the thought
+- **[哑铃社会](Docs/哑铃社会.md)** — AI is pressing the spindle-shaped society into a dumbbell: the middle hollows out, and the real divide is whether you have something that must be yours
+- **[思考与河床](Docs/思考与河床.md)** — AI is the first riverbed engineered rather than eroded: the first influence mechanism in history that makes the influenced feel autonomous
+- **[经历论](Docs/经历论.md)** — A person is the sum of their lived experiences: what cannot be reversed, transferred, or outsourced to AI is what makes you irreplaceably you
+- **[认知外包](Docs/认知外包.md)** — Memory is not storage: understanding happens while your brain processes an answer, so what you can outsource is the execution of thinking, never the first encounter with a problem you have no frame for — a reference goes through you, an answer goes past you
+- **[文字思考和数学思考](Docs/文字思考和数学思考.md)** — Three ways of thinking as nested projections: an LLM drifts through continuous high-dimensional space, words snap it onto a discrete lattice, math locks it into an axiom system — the more precise the mode, the narrower its reach, and thought always overflows whatever describes it
+- **[去除AI味儿](Docs/去除AI味儿.md)** — The smell of AI writing is the posture of language standing in for content and judgment: meta-commentary, defensive hedging, piled-up examples, forced symmetry, borrowed grandeur — a prompt to strip them all, plus the test of what survives
+- **[语言层差和行业语言](Docs/语言层差和行业语言.md)** — You live on the level of symptoms while AI's best knowledge lives on the level of essence: say "make it pretty" and you get mediocrity, say "establish visual hierarchy" and you get a system — you need not learn the trade language first, let AI translate and learn as it does, the only skill to build is noticing the moment you are speaking in symptoms
+- **[语言控制学](Docs/语言控制学.md)** — Linguistic Cybernetics as an axiomatic system: five axioms, 30 definitions, 29 theorems — a prompt is a constraint signal that reshapes the model's possibility space, control power is bounded, feedback converges or degenerates, multi-objective goals hit a Pareto frontier — and the bottleneck is never the model but whether you can translate vague intent into a precise signal
 
 *These foundational insights will transform how you think about prompts.*
 
@@ -226,6 +277,7 @@ skills:
 | **[PromptVer](https://github.com/langgptai/PromptVer)** | Semantic versioning for prompts — version control like Git | ![](https://badgen.net/github/stars/langgptai/PromptVer) |
 | **[PromptShow](https://github.com/langgptai/PromptShow)** | Create beautiful prompt images ([Try it](https://show.langgpt.ai/)) | ![](https://badgen.net/github/stars/langgptai/PromptShow) |
 | **[Minstrel](https://github.com/langgptai/Minstrel)** | Multi-agent system for auto-generating prompts | ![](https://badgen.net/github/stars/langgptai/Minstrel) |
+| **[claude_marketplace](https://github.com/langgptai/claude_marketplace)** | Official Claude Code skill marketplace — structured prompt, design, CTO, mind-clone | ![](https://badgen.net/github/stars/langgptai/claude_marketplace) |
 
 ### Model-Specific Prompt Collections
 
@@ -313,7 +365,13 @@ New to GitHub contributions? Check out this [GitHub Minimal Contribution Guide](
 
 ## 📊 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=langgptai/LangGPT&type=Date)](https://star-history.com/#langgptai/LangGPT&Date)
+<a href="https://star-history.com/#langgptai/LangGPT&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=langgptai/langgpt&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=langgptai/langgpt&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=langgptai/langgpt&type=Date" />
+  </picture>
+</a>
 
 ---
 
@@ -324,7 +382,7 @@ If you use LangGPT in research or projects, please cite:
 ```bibtex
 @misc{wang2024langgpt,
       title={LangGPT: Rethinking Structured Reusable Prompt Design Framework for LLMs from the Programming Language}, 
-      author={Ming Wang and Yuanzhong Liu and Xiaoming Zhang and Songlian Li and Yijie Huang and Chi Zhang and Daling Wang and Shi Feng and Jigang Li},
+      author={Ming Wang and Yuanzhong Liu and Xiaoyu Liang and Songlian Li and Yijie Huang and Xiaoming Zhang and Sijia Shen and Chaofeng Guan and Daling Wang and Shi Feng and Huaiwen Zhang and Yifei Zhang and Minghui Zheng and Chi Zhang},
       year={2024},
       eprint={2402.16929},
       archivePrefix={arXiv},

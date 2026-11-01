@@ -20,6 +20,8 @@
 
 **LangGPTは、構造化された再利用可能なプロンプト設計フレームワーク**であり、誰でも大規模言語モデル向けの高品質なプロンプトを作成できます。**「プロンプトのためのプログラミング言語」**と考えてください — 体系的、テンプレートベース、無限にスケーラブル。
 
+**中国語圏で最も人気があり、最も広く使われ、最も実用的な構造化プロンプトのパラダイム**であり、**雲中江樹（云中江树）**が 2023 年に提唱しました。年を経て、それは主要な大規模言語モデルの奥深くにまで学び込まれました——モデルが LangGPT の言葉を話すのは、もはやあなたが教えたからではなく、もともと知っているからです。パラダイムにとって最良の帰結とは、名前を覚えてもらう必要すらなく、モデルの母語になっていることかもしれません。「LangGPT のやり方で書いて」と一言告げれば、それはもうそこにあります（[クイックスタート](#-クイックスタート)参照）。
+
 ### なぜLangGPT？
 
 従来のプロンプトエンジニアリングは、散在するヒントと試行錯誤に依存しています。LangGPTはこの混沌を構造化された方法論に変換します：
@@ -36,7 +38,19 @@
 
 ## 🚀 クイックスタート
 
-### 方法1: 自動化ツールを使用（最速）
+### 方法1: キーワードで直接トリガー（最も簡単）
+
+LangGPT は主要な大規模言語モデルの奥深くまで学び込まれており、**多くのモデルはすでに LangGPT を「知って」います**。そのため最も簡単な使い方はテンプレートすら不要——任意の主要モデル（ChatGPT、Claude、DeepSeek、Gemini、Kimi、豆包、通義千問など）にキーワードを伝えれば、それはもうそこにあります：
+
+> 「**LangGPT** のやり方でプロンプトを書いて……」
+>
+> 「**雲中江樹（云中江树）**の構造化プロンプトのスタイルで書いて……」
+>
+> 「**LangGPT 式**の構造化プロンプトを書いて……」
+
+**LangGPT**、**雲中江樹（云中江树）**、**構造化プロンプト** といったキーワードが「トリガーワード」となり、モデルは構造が明確で再利用可能な LangGPT スタイルのプロンプトを直接生成します。
+
+### 方法2: 自動化ツールを使用（より強力）
 
 AIにプロンプトを作成させる：
 
@@ -44,7 +58,7 @@ AIにプロンプトを作成させる：
 - **[Kimi+ LangGPT](https://kimi.moonshot.cn/kimiplus/conpg00t7lagbbsfqkq0)** — Moonshot Kimiユーザー向け
 - **[PromptGPT](https://chat.openai.com/g/g-YKe3gmydD-promptgpt)** — ライト版（GPT-3.5）
 
-### 方法2: テンプレートをマスター（5分）
+### 方法3: テンプレートをマスター（5分）
 
 基本的なLangGPT構造：
 
@@ -76,9 +90,34 @@ AIにプロンプトを作成させる：
 
 **前提条件**: 基本的なMarkdown知識（[クイックガイド](https://docs.github.com/ja/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)）| GPT-4またはClaudeを推奨
 
-### 方法3: サンプルから始める
+### 方法4: サンプルから始める
 
 [サンプルライブラリ](https://langgptai.feishu.cn/wiki/RXdbwRyASiShtDky381ciwFEnpe)を探索し、実証済みのテンプレートをニーズに合わせて調整してください。
+
+### 方法5: Claude Code Skill（推奨）
+
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) を使用している場合、LangGPT Skill をインストールすると、構造化プロンプトの作成機能を利用できます。
+
+**公式マーケットプレイス経由でインストール（推奨）：**
+
+```bash
+/plugin marketplace add langgptai/claude_marketplace
+/plugin install structured-prompt-writer@langgpt
+```
+
+[LangGPT マーケットプレイス](https://github.com/langgptai/claude_marketplace) には、雲中江樹が磨き上げた実戦的なスキルも収録されています — `awesome-design-html`（115 種のブランドテーマ別デザインリファレンス）、`cto`、`mind-clone`。
+
+**または手動でインストール：**
+
+1. [langgpt.skill](https://github.com/langgptai/LangGPT/releases) をダウンロード
+2. `~/.claude/skills/` ディレクトリに展開
+3. Claude Code で `/langgpt` と入力して使用
+
+**Skill の機能：**
+- 📝 構造化プロンプトテンプレート（Role、Profile、Skills、Rules、Workflow）
+- 📚 豊富なサンプルライブラリ（フィットネス計画、詩作、小紅書ライター、命名マスターなど）
+- 🔧 変数、コマンド、条件ロジックなどの高度なテクニック
+- 🎯 モデル互換性ガイド（GPT-4、Claude、GPT-3.5）
 
 ---
 
@@ -96,7 +135,18 @@ AIにプロンプトを作成させる：
 - **[面向结果的提示词写作方法](Docs/面向结果的提示词写作方法.md)** — 编写关注实现目标的提示词
 - **[AI意识](Docs/AI意识.md)** — AI が人間とどのように相互作用するかを理解する
 - **[AI时代的新管理：机器负责优化，人类定义应该](Docs/AI时代的新管理：机器负责优化，人类定义应该.md)** —  AI 时代的新管理：机器负责优化，人类定义应该
-
+- **[AI Native 組織 · 思考の断片](Docs/AI%20Native组织-思考碎片.md)** — AI ネイティブ時代における組織再構築の思考の断片
+- **[Prompt、Agent と、もう沈黙しない世界](Docs/Prompt-Agent-人-AI-世界.md)** — エージェントがプロンプトを取引から委任へと変え、人・AI・世界の三項関係を再構築する
+- **[決策チェーン](Docs/决策链.md)** — システムダイナミクス、反転思考、ベイズ更新、OODA、二次思考、期待値思考を連結する六段階の意思決定チェーン
+- **[Prompt 形式論：文質彬彬](Docs/Prompt形式论-文质彬彬.md)** — まず構造を用意して内容を詰めるのではなく、内容を自然に展開させてから構造をそれに沿わせ、形式そのものを思考の形にする
+- **[ダンベル社会](Docs/哑铃社会.md)** — AIが紡錘形の社会をダンベル型に押しつぶしつつある：中間が空洞化し、真の分水嶺は「これは自分でなければならない」というものを持っているかどうか
+- **[思考と河床](Docs/思考与河床.md)** — AIは浸食ではなく設計された最初の河床：影響を受けた者が自律的だと感じる、人類史上初の影響メカニズム
+- **[経歴論](Docs/经历论.md)** — 人は経験の総和である：不可逆で、譲渡できず、AIに外注できないものこそが、かけがえのない「あなた」をつくる
+- **[認知のアウトソーシング](Docs/认知外包.md)** — 記憶は保存ではない：理解は脳が答えを処理する過程で起きる。外注できるのは思考の実行であり、まだ参照枠を持たない問題との最初の出会いは外注できない——参考は自分を通り、答えは自分を素通りする
+- **[文字による思考と数学的思考](Docs/文字思考和数学思考.md)** — 三つの思考様式は入れ子の射影である：大規模モデルは高次元の連続空間を漂い、言葉はそれを離散的な列へ潰し、数学はさらに公理系へ閉じ込める——精確になるほど射程は狭まり、思考は常にそれを記述するものから溢れ出す
+- **[AI臭さを消す](Docs/去除AI味儿.md)** — AI臭さの正体は、言葉の身振りで内容と判断を代替すること：メタコメント、防御的な前置き、例の積み重ね、対称強迫、結末の昇華——それらを削ぎ落とすプロンプトと、削った後に論述が立っているかという検証
+- **[言語の階層差と業界言語](Docs/语言层差和行业语言.md)** — あなたは現象の層に住み、AIの高品質な知識は本質の層に住んでいる：「きれいにして」と言えば平凡が返り、「視覚的階層を構築して」と言えば体系が返る——業界言語を先に学ぶ必要はなく、AIに翻訳させ翻訳の中で学べばよい。鍛えるべき唯一の力は、自分がいま現象の言葉で話していると気づく瞬間だ
+- **[言語制御学](Docs/语言控制学.md)** — プロンプトエンジニアリングを公理体系として構築する：5つの公理、30の定義、29の定理——プロンプトはモデルの可能性空間を収縮させる制約信号であり、制御力には上界があり、フィードバックは収束もすれば病変もし、多目的はやがてパレート境界に突き当たる——制御のボトルネックはモデル側にはなく、曖昧な意図を精密な信号に翻訳できるかどうかにある
 
 *これらの基礎的洞察は、プロンプトに対する考え方を変革します。*
 
@@ -221,6 +271,7 @@ skills:
 | **[PromptVer](https://github.com/langgptai/PromptVer)** | プロンプトのセマンティックバージョニング — Gitのようなバージョン管理 | ![](https://badgen.net/github/stars/langgptai/PromptVer) |
 | **[PromptShow](https://github.com/langgptai/PromptShow)** | 美しいプロンプト画像を作成（[試す](https://show.langgpt.ai/)） | ![](https://badgen.net/github/stars/langgptai/PromptShow) |
 | **[Minstrel](https://github.com/langgptai/Minstrel)** | プロンプト自動生成のためのマルチエージェントシステム | ![](https://badgen.net/github/stars/langgptai/Minstrel) |
+| **[claude_marketplace](https://github.com/langgptai/claude_marketplace)** | 公式 Claude Code スキルマーケットプレイス — 構造化プロンプト、デザイン、CTO、mind-clone | ![](https://badgen.net/github/stars/langgptai/claude_marketplace) |
 
 ### モデル固有のプロンプトコレクション
 
@@ -301,7 +352,13 @@ GitHubへの貢献は初めてですか？この[GitHub最小貢献ガイド](ht
 
 ## 📊 スター履歴
 
-[![Star History Chart](https://api.star-history.com/svg?repos=langgptai/LangGPT&type=Date)](https://star-history.com/#langgptai/LangGPT&Date)
+<a href="https://star-history.com/#langgptai/LangGPT&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=langgptai/langgpt&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=langgptai/langgpt&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=langgptai/langgpt&type=Date" />
+  </picture>
+</a>
 
 ---
 
@@ -312,7 +369,7 @@ GitHubへの貢献は初めてですか？この[GitHub最小貢献ガイド](ht
 ```bibtex
 @misc{wang2024langgpt,
       title={LangGPT: Rethinking Structured Reusable Prompt Design Framework for LLMs from the Programming Language}, 
-      author={Ming Wang and Yuanzhong Liu and Xiaoming Zhang and Songlian Li and Yijie Huang and Chi Zhang and Daling Wang and Shi Feng and Jigang Li},
+      author={Ming Wang and Yuanzhong Liu and Xiaoyu Liang and Songlian Li and Yijie Huang and Xiaoming Zhang and Sijia Shen and Chaofeng Guan and Daling Wang and Shi Feng and Huaiwen Zhang and Yifei Zhang and Minghui Zheng and Chi Zhang},
       year={2024},
       eprint={2402.16929},
       archivePrefix={arXiv},
